@@ -1,3 +1,5 @@
+// This makes the navbar sticky
+
 window.onscroll = function () {
   myFunction();
 };
