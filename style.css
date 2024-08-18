@@ -102,7 +102,7 @@ body {
   font-size: 4rem;
   font-weight: bold;
   background: linear-gradient(90deg, blue, purple);
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease-in-out;
