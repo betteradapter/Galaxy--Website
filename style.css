@@ -77,6 +77,33 @@ body {
   font-size: 1.5rem;
 }
 
+.nav-items a {
+  text-decoration: none;
+  color: purple;
+  font-size: 1.5rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-items a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #9400d3;
+  left: 0;
+  bottom: -3px;
+  transition: width 0.3s ease;
+}
+
+.nav-items a:hover {
+  color: #9400d3;
+}
+
+.nav-items a:hover::after {
+  width: 100%;
+}
+
 /* Nav bar end */
 
 /* This is hero section */
@@ -100,11 +127,12 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
+  width: 100%;
 }
 
 /* Hero section end */
 
-.hero h2 {
+.hero-wrapper h2 {
   font-size: 4rem;
   font-weight: 700;
   color: white;
