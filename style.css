@@ -10,10 +10,14 @@
   font-style: normal;
 }
 
-/* These are utility classes */
+/* These are utility classes and variables */
 .container {
   width: 90%;
   margin: auto;
+}
+:root {
+  --blue-color: #344ca3;
+  --secondary-color: #92cc26;
 }
 
 /* utility classes end */
@@ -25,7 +29,7 @@ body {
 /* This is for top contact info bar */
 
 .contact-info {
-  background-color: coral;
+  background-color: var(--blue-color);
 }
 .contact-wrapper {
   padding: 0.5em;
@@ -39,10 +43,14 @@ body {
 
 .contact-wrapper a {
   text-decoration: none;
-  color: black;
-
+  color: white;
   display: flex;
+  align-items: center;
   gap: 0.5em;
+}
+
+.contact-wrapper span :hover {
+  color: var(--secondary-color);
 }
 /* contact info end  */
 
@@ -58,7 +66,7 @@ body {
 #navbar {
   width: 100%;
   padding: 1em;
-  background-color: #f5f5f5;
+  background-color: white;
   transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
@@ -72,13 +80,7 @@ body {
 
 .nav-items a {
   text-decoration: none;
-  color: purple;
-  font-size: 1.5rem;
-}
-
-.nav-items a {
-  text-decoration: none;
-  color: purple;
+  color: black;
   font-size: 1.5rem;
   position: relative;
   transition: color 0.3s ease;
@@ -89,14 +91,14 @@ body {
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: #9400d3;
+  background-color: var(--secondary-color);
   left: 0;
   bottom: -3px;
   transition: width 0.3s ease;
 }
 
 .nav-items a:hover {
-  color: #9400d3;
+  color: var(--secondary-color);
 }
 
 .nav-items a:hover::after {
@@ -109,7 +111,7 @@ body {
 
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("/school.jpg");
   background-position: center;
   background-size: cover;
@@ -137,11 +139,6 @@ body {
   color: white;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease-in-out;
-}
-
-.container h2:hover {
-  text-shadow: 0 0 20px rgba(0, 0, 255, 0.7), 0 0 40px rgba(255, 0, 255, 0.7);
-  transform: scale(1.1);
 }
 
 /* This facilities section */
