@@ -14,7 +14,6 @@
 .container {
   width: 90%;
   margin: auto;
-  padding: 0.5em;
 }
 
 /* utility classes end */
@@ -29,6 +28,7 @@ body {
   background-color: coral;
 }
 .contact-wrapper {
+  padding: 0.5em;
   display: flex;
   gap: 1em;
 }
@@ -144,4 +144,25 @@ body {
   transform: scale(1.1);
 }
 
-/* add comment also if you change any line below this */
+/* This facilities section */
+.facilities {
+  background-color: blue;
+}
+
+.facilities-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em;
+}
+
+/* Facilities section end */
+
+/* This is welcome section */
+
+.welcome-wrapper {
+  padding: 2em;
+  display: flex;
+}
+.welcome-wrapper aside {
+  width: 50%;
+}
