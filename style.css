@@ -24,6 +24,7 @@
 
 body {
   background-color: #fff;
+  margin: auto;
 }
 
 /* This is for top contact info bar */
@@ -112,7 +113,7 @@ body {
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("/school.jpg");
+    url("./school.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -164,12 +165,11 @@ body {
   width: 50%;
 }
 
-
 /* Keyframes for fade-in effect */
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(20px); 
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
@@ -181,5 +181,5 @@ body {
 .hero-wrapper,
 .facilities-wrapper,
 .welcome-wrapper {
-  animation: fadeIn 2s ease-in-out forwards; /
+  animation: fadeIn 2s ease-in-out forwards;
 }
