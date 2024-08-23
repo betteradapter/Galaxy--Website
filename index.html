@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navigations Button</title>
+    <title>Galaxy Secondary School</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -16,29 +16,34 @@
       <section class="contact-info">
         <div class="container">
           <div class="contact-wrapper">
-            <span>
+            <div class="contact-item">
               <a href="tel:+977-911732777">
-                <i class="fa fa-phone"></i> +977-911732777
+                <i class="fa fa-phone"></i>
+                <span> +977-911732777 </span>
               </a>
-            </span>
-            <span>
+            </div>
+            <div class="contact-item">
               <a href="mailto:galaxysecsch77@gmail.com">
-                <i class="fa fa-envelope"></i> galaxysecsch77@gmail.com
+                <i class="fa fa-envelope"></i>
+                <span> galaxysecsch77@gmail.com </span>
               </a>
-            </span>
+            </div>
           </div>
         </div>
       </section>
 
-      <nav id="navbar">
+      <nav id="navbar" class="navbar">
         <div class="container">
-          <ul class="nav-items">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Admissions</a></li>
-            <li><a href="#">About Us</a></li>
-          </ul>
+          <div class="nav-wrapper">
+            <div class="logo">Galaxy</div>
+            <ul class="nav-items">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Admissions</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -51,64 +56,44 @@
           </div>
         </div>
       </section>
+
       <section class="facilities">
         <div class="container">
           <div class="facilities-wrapper">
-            <div>
+            <div class="facility">
               <lord-icon
                 src="https://cdn.lordicon.com/yodjuckr.json"
                 trigger="hover"
                 style="width: 75px; height: 75px"
-              >
-              </lord-icon>
-              <span>labs</span>
+              ></lord-icon>
+              <span>Laboratories</span>
             </div>
-            <div>
-              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <div class="facility">
               <lord-icon
                 src="https://cdn.lordicon.com/qwjfapmb.json"
                 trigger="hover"
                 style="width: 75px; height: 75px"
-              >
-              </lord-icon>
+              ></lord-icon>
               <span>Library</span>
             </div>
-            <div>
+            <div class="facility">
               <lord-icon
                 src="https://cdn.lordicon.com/vvqcrgre.json"
                 trigger="hover"
                 colors="primary:#ebe6ef,secondary:#4bb3fd,tertiary:#b4b4b4"
                 style="width: 75px; height: 75px"
-              >
-              </lord-icon>
-              <span>Smart class</span>
+              ></lord-icon>
+              <span>Smart Class</span>
             </div>
           </div>
         </div>
       </section>
-      <section class="welcome">
-        <div class="container">
-          <div class="welcome-wrapper">
-            <aside>
-              <p>
-                At Galaxy Secondary School, we nurture students to become
-                intellectually sharp, socially conscious, and self-reliant
-                individuals. Our dynamic environment promotes creativity,
-                character development, and integrity, with dedicated teachers
-                guiding students to achieve their full potential. By joining the
-                Galaxian family, you embark on a path of growth, discovery, and
-                success.
-              </p>
-            </aside>
-            <figure>
-              <img src="/logo.png" alt="" />
-            </figure>
-          </div>
-        </div>
-      </section>
     </main>
+
     <footer>
-      <a href="https://lordicon.com/">Icons by Lordicon.com</a>
+      <div class="container">
+        <p><a href="https://lordicon.com/">Icons by Lordicon.com</a></p>
+      </div>
     </footer>
 
     <script src="/script.js"></script>

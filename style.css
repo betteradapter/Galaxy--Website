@@ -1,48 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Source+Serif+4:wght@200;400;500;700&display=swap");
 
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
 
+body {
   font-family: "Source Serif 4", serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background-color: #fff;
 }
 
-/* These are utility classes and variables */
-.container {
-  width: 90%;
-  margin: auto;
-}
 :root {
-  --blue-color: #344ca3;
+  --primary-color: #3d5280;
+  --dark-acent: #6188db;
+  --light-acent: #edf7ff;
   --secondary-color: #92cc26;
 }
 
-/* utility classes end */
-
-body {
-  background-color: #fff;
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1024px;
   margin: auto;
 }
 
-/* This is for top contact info bar */
-
+/* Contact Info */
 .contact-info {
-  background-color: var(--blue-color);
+  background-color: var(--dark-acent);
 }
+
 .contact-wrapper {
   padding: 0.5em;
   display: flex;
   gap: 1em;
+  width: 100%;
 }
 
-.contact-wrapper i {
-  color: white;
-}
-
-.contact-wrapper a {
+.contact-item a {
   text-decoration: none;
   color: white;
   display: flex;
@@ -50,31 +48,41 @@ body {
   gap: 0.5em;
 }
 
-.contact-wrapper span :hover {
+.contact-item a:hover {
   color: var(--secondary-color);
 }
-/* contact info end  */
 
-/* This is nav bar  */
-
-.sticky {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  padding: 1em;
+.contact-item i {
+  color: white;
 }
 
-#navbar {
+/* Navbar */
+.navbar {
   width: 100%;
   padding: 1em;
   background-color: white;
   transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .nav-items {
   display: flex;
-  justify-content: end;
-  align-items: center;
   list-style: none;
   gap: 1em;
 }
@@ -85,6 +93,10 @@ body {
   font-size: 1.5rem;
   position: relative;
   transition: color 0.3s ease;
+}
+
+.nav-items a:hover {
+  color: var(--secondary-color);
 }
 
 .nav-items a::after {
@@ -98,18 +110,11 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-items a:hover {
-  color: var(--secondary-color);
-}
-
 .nav-items a:hover::after {
   width: 100%;
 }
 
-/* Nav bar end */
-
-/* This is hero section */
-
+/* Hero Section */
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -117,8 +122,6 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,41 +131,51 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  width: 100%;
 }
-
-/* Hero section end */
 
 .hero-wrapper h2 {
   font-size: 4rem;
   font-weight: 700;
   color: white;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease-in-out;
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
-/* This facilities section */
+/* Facilities Section */
 .facilities {
-  background-color: blue;
+  background-color: var(--light-acent);
+  padding: 2em 0;
 }
 
 .facilities-wrapper {
   display: flex;
-  justify-content: space-evenly;
-  padding: 1em;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Facilities section end */
-
-/* This is welcome section */
-
-.welcome-wrapper {
-  padding: 2em;
+.facility {
   display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeIn 2s ease-in-out forwards;
 }
-.welcome-wrapper aside {
-  width: 50%;
+
+/* Footer */
+footer {
+  padding: 1em 0;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--secondary-color);
 }
 
 /* Keyframes for fade-in effect */
@@ -177,9 +190,94 @@ body {
   }
 }
 
-/* Apply fade-in animation */
-.hero-wrapper,
-.facilities-wrapper,
-.welcome-wrapper {
-  animation: fadeIn 2s ease-in-out forwards;
+/* Media Queries */
+
+/* Small Devices (Tablets, 768px and below) */
+@media (max-width: 768px) {
+  .nav-items {
+    font-size: 1.2rem;
+    display: none;
+  }
+
+  .hero-wrapper h2 {
+    font-size: 3rem;
+  }
+
+  .facilities-wrapper {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .welcome-wrapper {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .welcome-text,
+  .welcome-image {
+    width: 100%;
+  }
+
+  .welcome-text {
+    text-align: center;
+  }
+}
+
+/* Extra Small Devices (Mobile phones, 480px and below) */
+@media (max-width: 480px) {
+  .contact-item span {
+    display: none;
+  }
+  .navbar {
+    padding: 0.5em;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-items a {
+    font-size: 1rem;
+  }
+
+  .hero-wrapper h2 {
+    font-size: 2.5rem;
+    padding: 0 1em;
+    text-align: center;
+  }
+
+  .facilities-wrapper {
+    gap: 1.5em;
+  }
+
+  .facility span {
+    font-size: 0.9rem;
+  }
+
+  .welcome-wrapper {
+    gap: 0.5em;
+  }
+
+  .welcome-text {
+    font-size: 1rem;
+  }
+}
+
+/* Very Small Devices (Small phones, 360px and below) */
+@media (max-width: 360px) {
+  .hero-wrapper h2 {
+    font-size: 2rem;
+  }
+
+  .welcome-text {
+    font-size: 0.9rem;
+  }
+
+  .nav-items a {
+    font-size: 0.9rem;
+  }
+
+  .facility span {
+    font-size: 0.8rem;
+  }
 }
