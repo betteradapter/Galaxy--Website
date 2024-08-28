@@ -6,19 +6,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --primary-color: #008080;
+  --acent-color: #ffa500;
+  --background-color: #ffffff;
+  --text-color: #2f4f4f;
+  --highlight-color: #66b2ff;
+}
 
 body {
   font-family: "Source Serif 4", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background-color: #fff;
-}
-
-:root {
-  --primary-color: #3d5280;
-  --dark-acent: #6188db;
-  --light-acent: #edf7ff;
-  --secondary-color: #92cc26;
+  background-color: var(--background-color);
 }
 
 /* Container */
@@ -30,7 +30,7 @@ body {
 
 /* Contact Info */
 .contact-info {
-  background-color: var(--dark-acent);
+  background-color: var(--acent-color);
 }
 
 .contact-wrapper {
@@ -49,7 +49,7 @@ body {
 }
 
 .contact-item a:hover {
-  color: var(--secondary-color);
+  color: var(--text-colorr);
 }
 
 .contact-item i {
@@ -60,7 +60,7 @@ body {
 .navbar {
   width: 100%;
   padding: 1em;
-  background-color: white;
+  background-color: var(--background-color);
   transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
@@ -96,7 +96,7 @@ body {
 }
 
 .nav-items a:hover {
-  color: var(--secondary-color);
+  color: var(--highlight-color);
 }
 
 .nav-items a::after {
@@ -104,7 +104,7 @@ body {
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: var(--secondary-color);
+  background-color: var(--highlight-color);
   left: 0;
   bottom: -3px;
   transition: width 0.3s ease;
@@ -143,7 +143,7 @@ body {
 
 /* Facilities Section */
 .facilities {
-  background-color: var(--light-acent);
+  background-color: #70a9ca;
   padding: 2em 0;
 }
 
@@ -165,17 +165,17 @@ body {
 footer {
   padding: 1em 0;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--text-color);
   text-align: center;
 }
 
 footer a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
 }
 
 footer a:hover {
-  color: var(--secondary-color);
+  color: var(--highlight-color);
 }
 
 /* Keyframes for fade-in effect */
