@@ -162,6 +162,35 @@ body {
   animation: fadeIn 2s ease-in-out forwards;
 }
 
+/* Welcome Section */
+.welcome-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.wel-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
+}
+.wel-info {
+  display: flex;
+}
+.wel-info-txt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.wel-info-txt span {
+  margin-top: 2.5em;
+}
+.wel-info-img {
+  width: 50%;
+}
+.wel-info-img img {
+  width: 100%;
+}
 /* Footer */
 footer {
   padding: 1em 0;
